@@ -1,0 +1,86 @@
+export const skillsGroups = [
+  {
+    title: "Frontend Development",
+    skills: [
+      "React",
+      "React Router",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Redux",
+      "React Hooks",
+      "Context API",
+      "Responsive Design",
+      "Accessibility (WCAG 2.1)",
+      "D3.js",
+    ],
+  },
+  {
+    title: "Performance & Architecture",
+    skills: [
+      "Code-splitting",
+      "Lazy Loading",
+      "Memoization",
+      "Component Architecture",
+      "Bundle Optimization",
+      "Rendering Performance Optimization",
+      "Custom Hooks",
+    ],
+  },
+  {
+    title: "Testing & Quality",
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "Unit Testing",
+      "Debugging",
+      "Browser DevTools",
+      "E2E Testing",
+    ],
+  },
+  {
+    title: "Backend, APIs & Data",
+    skills: [
+      "Node.js (exposure)",
+      "REST APIs",
+      "API Integration",
+      "Microservices",
+      "MongoDB (familiar)",
+      "Elastic Search",
+      "Data Modeling",
+    ],
+  },
+  {
+    title: "DevOps & Infrastructure",
+    skills: [
+      "AWS CodePipeline",
+      "Infrastructure as Code (IaC)",
+      "GitHub Actions",
+      "CI/CD Automation",
+      "Webpack",
+      "Babel",
+      "Datadog RUM",
+    ],
+  },
+  {
+    title: "Security & Reliability",
+    skills: [
+      "Vulnerability Management",
+      "Dependency Auditing",
+      "npm Security",
+      "Snyk",
+      "Dependabot",
+    ],
+  },
+  {
+    title: "Tools & Workflow",
+    skills: [
+      "Git",
+      "GitHub",
+      "Agile / Scrum",
+      "Pendo (analytics)",
+      "Storybook",
+    ],
+  },
+];

@@ -1,0 +1,5 @@
+export const aboutSectionContent = [
+  "Software Engineer with {years_of_experience} years of experience specializing in building high-performance, scalable Single Page Applications. Expert in component architecture, state management, performance optimization, and data visualization with a proven track record of improving page load times and increasing test coverage to 75%+.",
+  "Currently working at Thomson Reuters as a Software Development Engineer, where I've architected and optimized React SPA performance by 40%, built advanced data visualization dashboards using D3.js, and designed reusable component libraries that reduced feature development time by 35%. I'm passionate about delivering data-driven, accessible UIs with comprehensive analytics integration.",
+  "I hold a B.E. in Electronics and Instrumentation Engineering and recently won 2nd place in the She Loves Data Hackathon (2024) for building an Emotion-Based Song Recommendation System using modern web technologies and AI services.",
+];

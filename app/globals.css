@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
+    monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  /* Improve zoom behavior */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 280px; /* Prevent layout breaking on very small screens */
+  overflow-x: hidden;
+  /* Better zoom support */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better text wrapping */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Ensure fixed elements don't cause horizontal scroll */
+.fixed {
+  max-width: 100vw;
+}
+
+/* Better zoom out support */
+@media (max-width: 480px) {
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-4xl {
+    max-width: 100% !important;
+  }
+}
+
+/* Prevent zoom issues on very small screens */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Ensure navigation doesn't break on zoom out */
+nav {
+  min-height: auto;
+}
+
+/* Make containers truly flexible */
+.container,
+[class*="max-w-"] {
+  width: 100%;
+}
+
+/* Simple zoom out improvements without breaking normal layout */
+@media (min-width: 1400px) {
+  .max-w-4xl {
+    max-width: 80rem;
+  }
+  .max-w-5xl {
+    max-width: 90rem;
+  }
+  .max-w-6xl {
+    max-width: 100rem;
+  }
+  .max-w-7xl {
+    max-width: 110rem;
+  }
+}
+
+/* Better zoom behavior - allow containers to grow when zoomed out */
+@media screen and (min-width: 1600px) {
+  section > div[class*="max-w-"] {
+    max-width: none !important;
+    width: min(90vw, 120rem);
+  }
+}
+
+/* Zoom out support - target very wide viewports (zoom out scenarios) */
+@media screen and (min-width: 2400px) {
+  .max-w-4xl,
+  .max-w-5xl,
+  .max-w-6xl,
+  .max-w-7xl {
+    max-width: none !important;
+    width: 85vw !important;
+  }
+
+  /* Allow text to use more horizontal space */
+  p {
+    max-width: none !important;
+  }
+
+  /* Make grids more responsive to available space */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  }
+}
+
+/* Ultra-wide viewports (extreme zoom out) */
+@media screen and (min-width: 4000px) {
+  .max-w-4xl,
+  .max-w-5xl,
+  .max-w-6xl,
+  .max-w-7xl {
+    width: 90vw !important;
+  }
+
+  /* Make skills grid use more columns */
+  .grid-cols-1,
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  }
+}
