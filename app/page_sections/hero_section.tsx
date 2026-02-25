@@ -12,9 +12,7 @@ export default function HeroSection({
           years of expertise
         </h1>
         <p className="text-base text-gray-600 mb-8 leading-relaxed max-w-4xl">
-          Software Engineer specializing in building high-performance, scalable
-          Single Page Applications. Expert in component architecture, state
-          management, performance optimization, and data visualization.
+          Software Engineer delivering features end-to-end: data flow design, UI behavior, testing, and production hardening. I care about real-world performance and the craft behind shipping well.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 max-w-md">
           <a

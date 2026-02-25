@@ -18,21 +18,14 @@ export const metadata: Metadata = {
     "web development",
   ],
   authors: [{ name: "Poornima Rajappan" }],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    minimumScale: 0.2,
-    maximumScale: 5,
-    userScalable: true,
-  },
   openGraph: {
     title: "Poornima Rajappan - Software Engineer",
     description: "Crafting Digital Experiences",
-    url: "https://poornima-rajappan-portfolio.com",
+    url: "https://portfolio-poornima-rajappans-projects.vercel.app",
     siteName: "Poornima's Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://portfolio-poornima-rajappans-projects.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Poornima Rajappan - Crafting Digital Experiences",
@@ -40,6 +33,16 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+};
+
+export const viewport = {
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    minimumScale: 0.2,
+    maximumScale: 5,
+    userScalable: true,
   },
 };
 
