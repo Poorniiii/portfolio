@@ -6,19 +6,25 @@ export default function MobileMenuButton({
 }: IMobileMenuButtonProps) {
   return (
     <button
-      className="md:hidden p-2"
+      className="md:hidden p-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
       onClick={() => setIsMenuOpen(!isMenuOpen)}
       aria-label="Toggle menu"
     >
       <div className="w-6 h-6 flex flex-col justify-center items-center">
         <span
-          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
+          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+          }`}
         ></span>
         <span
-          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+            isMenuOpen ? "opacity-0" : "opacity-100"
+          }`}
         ></span>
         <span
-          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
+          className={`bg-gray-900 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+          }`}
         ></span>
       </div>
     </button>

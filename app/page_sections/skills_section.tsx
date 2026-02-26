@@ -1,83 +1,115 @@
+"use client";
+
 import { useState } from "react";
 import SectionTitle from "../common/section_title";
 import { skillsGroups } from "../constants/skills_section_constants";
 import Section from "../common/section";
 
 export default function SkillsSection() {
-  const [openAccordions, setOpenAccordions] = useState<{
-    [key: string]: boolean;
-  }>({
-    // All accordions open by default
-    ...skillsGroups.reduce(
-      (acc, group) => ({ ...acc, [group.title]: true }),
-      {},
-    ),
-  });
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const toggleAccordion = (title: string) => {
-    setOpenAccordions((prev) => ({
-      ...prev,
-      [title]: !prev[title],
-    }));
+  const getGroupColor = (index: number) => {
+    const colors = [
+      {
+        bg: "bg-[#D4AF37]/10",
+        border: "border-[#D4AF37]",
+        accent: "bg-[#D4AF37]",
+        text: "text-[#D4AF37]",
+      },
+      {
+        bg: "bg-gray-900/5",
+        border: "border-gray-300",
+        accent: "bg-gray-700",
+        text: "text-gray-700",
+      },
+      {
+        bg: "bg-[#B8941F]/10",
+        border: "border-[#B8941F]",
+        accent: "bg-[#B8941F]",
+        text: "text-[#B8941F]",
+      },
+      {
+        bg: "bg-gray-50",
+        border: "border-gray-200",
+        accent: "bg-gray-600",
+        text: "text-gray-600",
+      },
+      {
+        bg: "bg-[#D4AF37]/8",
+        border: "border-[#D4AF37]/50",
+        accent: "bg-[#D4AF37]",
+        text: "text-[#D4AF37]",
+      },
+      {
+        bg: "bg-gray-900/8",
+        border: "border-gray-400",
+        accent: "bg-gray-800",
+        text: "text-gray-800",
+      },
+      {
+        bg: "bg-[#B8941F]/8",
+        border: "border-[#B8941F]/50",
+        accent: "bg-[#B8941F]",
+        text: "text-[#B8941F]",
+      },
+    ];
+    return colors[index % colors.length];
   };
 
   return (
     <Section id="skills">
-      <SectionTitle title="SKILLS AND TOOLS" />
-      <div className="space-y-8">
-        {skillsGroups.map((group) => (
-          <div
-            key={group.title}
-            className="border-l-2 border-[#D4AF37] rounded-lg overflow-hidden bg-white shadow-sm"
-          >
-            <button
-              onClick={() => toggleAccordion(group.title)}
-              className="w-full px-4 py-3 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between focus:outline-none focus:bg-gray-100"
-            >
-              <h3 className="text-base text-lg font-semibold text-gray-800">
-                {group.title}
-              </h3>
-              <svg
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  openAccordions[group.title] ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
+      <SectionTitle title="MY TOOLBOX" />
 
-            <div
-              className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                openAccordions[group.title]
-                  ? "max-h-96 opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              <div className="p-4">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2">
-                  {group.skills.map((skill) => (
+      {/* Creative Background */}
+      <div className="relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-64 h-64 bg-[#D4AF37]/3 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-gray-900/5 rounded-full blur-2xl"></div>
+        </div>
+
+        {/* Skills Groups - Always Visible */}
+        <div className="space-y-12 relative z-10">
+          {skillsGroups.map((group, groupIndex) => {
+            const colors = getGroupColor(groupIndex);
+
+            return (
+              <div key={group.title} className="group">
+                {/* Group Header */}
+                <div className="flex items-center mb-6">
+                  <h3 className={`text-xl font-bold ${colors.text}`}>
+                    {group.title}
+                  </h3>
+                  <div className="flex-1 h-px bg-gray-200 ml-6"></div>
+                </div>
+
+                {/* Skills Grid - Always Visible */}
+                <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                  {group.skills.map((skill, skillIndex) => (
                     <div
                       key={skill}
-                      className="bg-gray-50 px-2 py-1 rounded text-center hover:bg-gray-100 transition-colors min-w-0"
+                      className={`
+                        relative rounded-xl p-4 transition-all duration-300
+                        ${colors.bg} ${colors.border} text-gray-700 border
+                        ${
+                          hoveredSkill === skill
+                            ? "transform scale-110 -translate-y-2 shadow-xl"
+                            : "transform hover:scale-105 hover:-translate-y-1 hover:shadow-md"
+                        }
+                      `}
+                      onMouseEnter={() => setHoveredSkill(skill)}
+                      onMouseLeave={() => setHoveredSkill(null)}
                     >
-                      <span className="text-base text-gray-700 break-words">
-                        {skill}
-                      </span>
+                      {/* Skill Content */}
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium text-sm">{skill}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </Section>
   );

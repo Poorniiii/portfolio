@@ -1,7 +1,8 @@
 import { ISectionProps } from "../interface";
 
 export default function Section({ id, children }: ISectionProps) {
-  const isGrayBackground = id === "about" || id === "experience";
+  const isGrayBackground =
+    id === "about" || id === "experience" || id === "projects";
   const isPaddingTop = id === "hero";
   return (
     <section

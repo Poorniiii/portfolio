@@ -5,6 +5,8 @@ import HeroSection from "./page_sections/hero_section";
 import AboutSection from "./page_sections/about_section";
 import SkillsSection from "./page_sections/skills_section";
 import ExperienceSection from "./page_sections/experience_section";
+import CaseStudiesSection from "./page_sections/case_study_section";
+import ProjectsSection from "./page_sections/project_section";
 import ContactSection from "./page_sections/contact_section";
 import Footer from "./common/footer";
 import DesktopMenu from "./menu/desktop_menu";
@@ -39,6 +41,8 @@ export default function Home() {
     { label: "About Me", href: "#about" },
     { label: "Skills & Tools", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Case Studies", href: "#case-studies" },
+    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -80,6 +84,12 @@ export default function Home() {
 
       {/* Experience Section */}
       <ExperienceSection />
+
+      {/* Case Studies Section */}
+      <CaseStudiesSection />
+
+      {/* Projects Section */}
+      <ProjectsSection />
 
       {/* Contact Section */}
       <ContactSection />
