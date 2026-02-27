@@ -25,8 +25,8 @@ export default function HeroSection({
         >
           {/* Badge */}
           <div className="mb-8">
-            <span className="inline-flex items-center px-6 py-3 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#B8941F] text-sm font-semibold animate-pulse">
-              <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3 animate-ping"></span>
+            <span className="inline-flex items-center px-6 py-3 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#4A4000] text-sm font-semibold animate-pulse">
+              <span className="w-2 h-2 bg-[#665500] rounded-full mr-3 animate-ping"></span>
               Available for new opportunities
             </span>
           </div>
@@ -40,13 +40,13 @@ export default function HeroSection({
           `}
           >
             <span className="text-gray-900">Building </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#B8941F] animate-gradient-x">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#665500] to-[#4A4000] animate-gradient-x">
               high-performance
             </span>
             <br />
             <span className="text-gray-900">web applications with </span>
             <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8941F] to-[#D4AF37]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A4000] to-[#665500]">
                 {years_of_experience}
               </span>
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] rounded-full"></div>
@@ -65,11 +65,11 @@ export default function HeroSection({
           >
             Software Engineer delivering features end-to-end: data flow design,
             UI behavior, testing, and production hardening. I care about{" "}
-            <span className="font-semibold text-[#B8941F]">
+            <span className="font-semibold text-[#665500]">
               real-world performance
             </span>{" "}
             and the{" "}
-            <span className="font-semibold text-[#D4AF37]">
+            <span className="font-semibold text-[#665500]">
               craft behind shipping well
             </span>
             .
@@ -85,7 +85,7 @@ export default function HeroSection({
           >
             <a
               href="#experience"
-              className="group relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#D4AF37]/25 transform hover:-translate-y-1 hover:scale-105"
+              className="group relative overflow-hidden bg-gradient-to-r from-[#9A7A00] to-[#7A6400] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#9A7A00]/25 transform hover:-translate-y-1 hover:scale-105"
             >
               <span className="relative z-10 flex items-center">
                 View My Growth
@@ -95,7 +95,7 @@ export default function HeroSection({
 
             <a
               href="#contact"
-              className="group relative overflow-hidden bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-[#D4AF37] hover:text-[#B8941F] hover:shadow-2xl hover:shadow-gray-900/10 transform hover:-translate-y-1"
+              className="group relative overflow-hidden bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-[#9A7A00] hover:text-[#7A6400] hover:shadow-2xl hover:shadow-gray-900/10 transform hover:-translate-y-1"
             >
               <span className="relative z-10 flex items-center">
                 Get In Touch

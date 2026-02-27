@@ -19,8 +19,8 @@ export default function DesktopMenu({ menuItems }: { menuItems: IMenuItem[] }) {
               relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ease-out
               ${
                 isActive
-                  ? "text-white bg-[#D4AF37] shadow-md"
-                  : "text-gray-600 hover:text-[#D4AF37] hover:bg-gray-50"
+                  ? "text-white bg-[#665500] shadow-md"
+                  : "text-gray-600 hover:text-[#665500] hover:bg-gray-50"
               }
             `}
           >

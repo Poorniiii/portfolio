@@ -26,7 +26,7 @@ export default function CaseStudySection() {
             className={`
               bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out
               border border-gray-200 overflow-hidden cursor-pointer transform hover:-translate-y-1
-              ${isExpanded(index) ? "ring-2 ring-[#D4AF37] ring-opacity-50" : ""}
+              ${isExpanded(index) ? "ring-2 ring-[#9A7A00] ring-opacity-50" : ""}
             `}
             onClick={() => toggleCard(index)}
           >
@@ -67,7 +67,7 @@ export default function CaseStudySection() {
                       : item.challenge}
                   </p>
                   <div className="mt-3">
-                    <span className="text-[#D4AF37] text-sm font-medium hover:text-[#B8941F] transition-colors">
+                    <span className="text-[#665500] text-sm font-medium hover:text-[#4A4000] transition-colors">
                       Click to expand →
                     </span>
                   </div>

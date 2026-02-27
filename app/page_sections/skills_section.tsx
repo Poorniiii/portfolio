@@ -13,8 +13,8 @@ export default function SkillsSection() {
       {
         bg: "bg-[#D4AF37]/10",
         border: "border-[#D4AF37]",
-        accent: "bg-[#D4AF37]",
-        text: "text-[#D4AF37]",
+        accent: "bg-[#665500]",
+        text: "text-[#665500]",
       },
       {
         bg: "bg-gray-900/5",
@@ -25,8 +25,8 @@ export default function SkillsSection() {
       {
         bg: "bg-[#B8941F]/10",
         border: "border-[#B8941F]",
-        accent: "bg-[#B8941F]",
-        text: "text-[#B8941F]",
+        accent: "bg-[#4A4000]",
+        text: "text-[#4A4000]",
       },
       {
         bg: "bg-gray-50",
@@ -37,8 +37,8 @@ export default function SkillsSection() {
       {
         bg: "bg-[#D4AF37]/8",
         border: "border-[#D4AF37]/50",
-        accent: "bg-[#D4AF37]",
-        text: "text-[#D4AF37]",
+        accent: "bg-[#665500]",
+        text: "text-[#665500]",
       },
       {
         bg: "bg-gray-900/8",
@@ -49,8 +49,8 @@ export default function SkillsSection() {
       {
         bg: "bg-[#B8941F]/8",
         border: "border-[#B8941F]/50",
-        accent: "bg-[#B8941F]",
-        text: "text-[#B8941F]",
+        accent: "bg-[#4A4000]",
+        text: "text-[#4A4000]",
       },
     ];
     return colors[index % colors.length];

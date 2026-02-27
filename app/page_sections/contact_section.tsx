@@ -11,7 +11,7 @@ export default function ContactSection() {
     index: number;
   }) => {
     const content = (
-      <div className="group relative overflow-hidden bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#D4AF37] hover:shadow-2xl hover:shadow-[#D4AF37]/10 transition-all duration-500 hover:-translate-y-2">
+      <div className="group relative overflow-hidden bg-white border border-gray-100 rounded-2xl p-6 hover:border-[#665500] hover:shadow-2xl hover:shadow-[#665500]/10 transition-all duration-500 hover:-translate-y-2">
         {/* Animated background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 via-transparent to-[#B8941F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -21,7 +21,7 @@ export default function ContactSection() {
 
         <div className="relative z-10 flex items-center gap-4">
           {/* Icon container with enhanced styling */}
-          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center group-hover:from-[#D4AF37] group-hover:to-[#B8941F] transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg">
+          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center group-hover:from-[#665500] group-hover:to-[#4A4000] transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg">
             <img
               src={item.icon}
               alt={item.alt}
@@ -35,7 +35,7 @@ export default function ContactSection() {
               {item.text}
             </span>
             {item.isLink && (
-              <div className="flex items-center gap-2 mt-1 text-sm text-gray-500 group-hover:text-[#D4AF37] transition-colors duration-300">
+              <div className="text-sm text-gray-500 group-hover:text-[#665500] transition-colors duration-300">
                 <span>Click to connect</span>
                 <svg
                   className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
@@ -56,7 +56,7 @@ export default function ContactSection() {
         </div>
 
         {/* Hover border effect */}
-        <div className="absolute inset-0 rounded-2xl border-2 border-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+        <div className="absolute inset-0 rounded-2xl border-2 border-[#665500] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
       </div>
     );
 
@@ -91,7 +91,7 @@ export default function ContactSection() {
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Let's work{" "}
-              <span className="bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#665500] to-[#B8941F] bg-clip-text text-transparent">
                 together
               </span>
             </h3>
@@ -99,7 +99,7 @@ export default function ContactSection() {
               Ready to bring your ideas to life? I'm just a click away. Let's
               connect and create something amazing together.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] mx-auto mt-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#665500] to-[#4A4000] mx-auto mt-6 rounded-full"></div>
           </div>
 
           {/* Contact items grid */}
