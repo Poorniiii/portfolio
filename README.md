@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Software Engineer Portfolio 👩‍💻
 
-## Getting Started
+A modern, responsive portfolio website showcasing my journey as a software engineer, built with Next.js and TypeScript. This site features my professional experience, skills, case studies, and projects with a focus on performance and user experience.
 
-First, run the development server:
+## 🌟 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit the live portfolio: [portfolio-poornima-rajappans-projects.vercel.app](https://portfolio-poornima-rajappans-projects.vercel.app)
+
+## ✨ Features
+
+- **🎨 Modern Design**: Clean, professional interface with smooth animations
+- **📱 Fully Responsive**: Optimized for all devices and screen sizes
+- **🚀 Performance Optimized**: Built with Next.js 16+ for optimal loading speeds
+- **♿ Accessible**: WCAG 2.1 compliant with proper semantic markup
+- **🎯 Interactive Navigation**: Smooth scrolling with active section highlighting
+- **📊 Dynamic Content**: Skills, experience, and projects loaded from structured data
+
+## 🏗️ Portfolio Sections
+
+- **Hero**: Professional introduction with years of experience
+- **About**: Personal background and professional philosophy
+- **Skills & Tools**: Technical expertise organized by categories
+- **Experience**: Professional journey and key achievements
+- **Case Studies**: In-depth project analyses and outcomes
+- **Projects**: Showcase of development work and contributions
+- **Contact**: Professional contact information and links
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19, Next.js 16, TypeScript
+- **Styling**: Tailwind CSS v4
+- **Performance**: Code splitting, smooth animations, responsive design
+- **Development**: ESLint, pnpm for package management
+- **Deployment**: Vercel Platform
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- pnpm (recommended) or npm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd my_portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── common/              # Reusable UI components
+│   ├── constants/           # Data and configuration files
+│   ├── hooks/               # Custom React hooks
+│   ├── menu/                # Navigation components
+│   ├── page_sections/       # Main portfolio sections
+│   ├── globals.css          # Global styles
+│   ├── interface.ts         # TypeScript interfaces
+│   ├── layout.tsx           # Root layout component
+│   └── page.tsx             # Main page component
+└── public/                  # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Adding New Sections
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create section component in `app/page_sections/`
+2. Add constants in `app/constants/`
+3. Import and include in `app/page.tsx`
+4. Update navigation menu items
 
-## Learn More
+### Modifying Content
 
-To learn more about Next.js, take a look at the following resources:
+Update the respective constant files in `app/constants/`:
+- `skills_section_constants.ts` - Technical skills
+- `experience_section_constants.ts` - Work history
+- `project_section_constants.ts` - Project showcases
+- `about_section_constants.ts` - Personal information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The portfolio is fully responsive with breakpoints:
+- Mobile: < 640px
+- Tablet: 640px - 1024px  
+- Desktop: > 1024px
 
-## Deploy on Vercel
+## ⚡ Performance Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Code Splitting**: Automatic route-based code splitting
+- **Smooth Animations**: CSS transitions and hover effects throughout
+- **Intersection Observer**: Content animations in About section
+- **Bundle Optimization**: Tree shaking and minification
+- **Caching**: Static generation with ISR capabilities
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. **Connect your repository** to [Vercel](https://vercel.com)
+2. **Configure build settings**:
+   - Build Command: `pnpm build`
+   - Output Directory: `.next`
+3. **Deploy** automatically on every push to main branch
+
+### Alternative Deployment Methods
+
+```bash
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## 🤝 Contributing
+
+This is a personal portfolio project. However, if you find bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+**Poornima Rajappan**  
+Software Engineer | Crafting Digital Experiences
+
+- Portfolio: [portfolio-poornima-rajappans-projects.vercel.app](https://portfolio-poornima-rajappans-projects.vercel.app)
+- LinkedIn: [Connect with me on LinkedIn](https://www.linkedin.com/in/poornima-r-)
+- Email: [Send me an email](mailto:poornivanaz@gmail.com)
+
+---
+
+*Built with ❤️ using Next.js and TypeScript*

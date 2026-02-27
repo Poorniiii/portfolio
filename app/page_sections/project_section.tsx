@@ -34,7 +34,7 @@ export default function ProjectSection() {
                 border border-gray-200 transition-all duration-500 ease-out cursor-pointer
                 ${
                   hoveredIndex === index
-                    ? "transform -translate-y-3 shadow-2xl shadow-[#D4AF37]/20 scale-105"
+                    ? "transform -translate-y-3 shadow-2xl shadow-[#665500]/20 scale-105"
                     : "shadow-lg hover:shadow-xl"
                 }
               `}
@@ -42,7 +42,7 @@ export default function ProjectSection() {
                 {/* Animated Top Border */}
                 <div
                   className={`
-                  absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-gray-900
+                  absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#665500] via-[#4A4000] to-gray-900
                   transition-all duration-700 ease-out
                   ${hoveredIndex === index ? "opacity-100" : "opacity-60"}
                 `}
@@ -56,7 +56,7 @@ export default function ProjectSection() {
                     text-xl font-bold mb-4 transition-all duration-300
                     ${
                       hoveredIndex === index
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#B8941F]"
+                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#665500] to-[#4A4000]"
                         : "text-gray-900"
                     }
                   `}
@@ -82,7 +82,7 @@ export default function ProjectSection() {
                             px-3 py-1 text-xs font-medium rounded-full border transition-all duration-300
                             ${
                               hoveredIndex === index
-                                ? "bg-[#D4AF37] text-white border-[#D4AF37] animate-pulse"
+                                ? "bg-[#665500] text-white border-[#665500] animate-pulse"
                                 : "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200"
                             }
                           `}
@@ -104,8 +104,8 @@ export default function ProjectSection() {
                         rounded-xl font-semibold text-sm transition-all duration-300 w-full
                         ${
                           hoveredIndex === index
-                            ? "bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white shadow-lg transform scale-105"
-                            : "bg-gray-900 text-white hover:bg-[#D4AF37]"
+                            ? "bg-gradient-to-r from-[#665500] to-[#4A4000] text-white shadow-lg transform scale-105"
+                            : "bg-gray-900 text-white hover:bg-[#665500]"
                         }
                       `}
                       onClick={(e) => e.stopPropagation()}

@@ -23,7 +23,7 @@ export default function ExperienceSection() {
 
       <div className="relative">
         {/* Timeline Line */}
-        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#D4AF37] via-[#B8941F] to-gray-300"></div>
+        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#9A7A00] via-[#7A6400] to-gray-300"></div>
 
         {/* Background Animation Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -46,7 +46,7 @@ export default function ExperienceSection() {
                 transition-all duration-500 ease-out z-20
                 ${
                   hoveredIndex === index
-                    ? "bg-[#D4AF37] border-white shadow-lg shadow-[#D4AF37]/50 scale-125"
+                    ? "bg-[#9A7A00] border-white shadow-lg shadow-[#9A7A00]/50 scale-125"
                     : "bg-white border-[#D4AF37] shadow-md"
                 }
               `}
@@ -83,8 +83,8 @@ export default function ExperienceSection() {
                       transition-all duration-300
                       ${
                         hoveredIndex === index
-                          ? "bg-[#D4AF37] text-white"
-                          : "bg-[#D4AF37]/10 text-[#B8941F]"
+                          ? "bg-[#665500] text-white"
+                          : "bg-[#665500]/10 text-[#4A4000]"
                       }
                     `}
                     >
@@ -111,7 +111,7 @@ export default function ExperienceSection() {
                     text-xl font-bold mb-3 transition-all duration-300
                     ${
                       hoveredIndex === index
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#B8941F]"
+                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#665500] to-[#B8941F]"
                         : "text-gray-900"
                     }
                   `}
@@ -124,7 +124,7 @@ export default function ExperienceSection() {
                     <div
                       className={`
                       w-2 h-2 rounded-full mr-3 transition-all duration-300
-                      ${hoveredIndex === index ? "bg-[#D4AF37]" : "bg-gray-400"}
+                      ${hoveredIndex === index ? "bg-[#665500]" : "bg-gray-400"}
                     `}
                     ></div>
                     <p className="text-lg font-semibold text-gray-700">

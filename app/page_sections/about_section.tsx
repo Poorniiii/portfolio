@@ -28,10 +28,10 @@ export default function AboutSection() {
   }, []);
 
   const highlights = [
-    { text: "Software Engineering", color: "text-[#D4AF37]" },
-    { text: "performant web applications", color: "text-[#B8941F]" },
-    { text: "creative problem-solving", color: "text-[#D4AF37]" },
-    { text: "shipping something", color: "text-[#B8941F]" },
+    { text: "Software Engineering", color: "text-[#665500]" },
+    { text: "performant web applications", color: "text-[#4A4000]" },
+    { text: "creative problem-solving", color: "text-[#665500]" },
+    { text: "shipping something", color: "text-[#4A4000]" },
   ];
 
   const myJourney = [
@@ -166,7 +166,7 @@ export default function AboutSection() {
                     bg-white rounded-2xl p-6 border-2 transition-all duration-300
                     ${
                       hoveredQuote === index
-                        ? "border-[#D4AF37] shadow-2xl shadow-[#D4AF37]/20"
+                        ? "border-[#9A7A00] shadow-2xl shadow-[#9A7A00]/20"
                         : "border-gray-200 shadow-lg"
                     }
                   `}

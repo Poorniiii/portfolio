@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Brand colors - WCAG compliant */
+  --brand-gold: #665500;        /* Darker gold - 7:1 contrast */
+  --brand-gold-dark: #4A4000;   /* Very dark gold - 10:1 contrast */
+  --brand-gold-light: #D4AF37;  /* Original color for backgrounds only */
+  --brand-gold-dark-light: #B8941F; /* Original color for backgrounds only */
 }
 
 @theme inline {
