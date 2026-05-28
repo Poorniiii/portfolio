@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Poornima Rajappan - Software Engineer",
     description: "Crafting Digital Experiences",
-    url: "https://portfolio-poornima-rajappans-projects.vercel.app",
+    url: "https://portfolio-poornima-rajappan.vercel.app",
     siteName: "Poornima's Portfolio",
     images: [
       {
-        url: "https://portfolio-poornima-rajappans-projects.vercel.app/og-image.png",
+        url: "https://portfolio-poornima-rajappan.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Poornima Rajappan - Crafting Digital Experiences",
