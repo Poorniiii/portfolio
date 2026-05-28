@@ -4,7 +4,8 @@ export const projectItems = [
     brief:
       "A lightweight single-page application built to explore component architecture and state management in React.",
     techs: ["React", "JavaScript", "CSS"],
-    link: "https://github.com/Poorniiii/shybreezediary_final",
+    code_link: "https://github.com/Poorniiii/shybreezediary_final",
+    demo_link: "https://github.com/Poorniiii/shybreezediary_final",
   },
   // {
   //   title: "Personal Journal Website",

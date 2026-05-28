@@ -42,11 +42,11 @@ export const skillsGroups = [
   {
     title: "Backend, APIs & Data",
     skills: [
-      "Node.js (exposure)",
+      "Node.js",
       "REST APIs",
       "API Integration",
       "Microservices",
-      "MongoDB (familiar)",
+      "PostgreSQL",
       "Elastic Search",
       "Data Modeling",
     ],

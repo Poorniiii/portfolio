@@ -1,108 +1,73 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Section from "../common/section";
+import GoldText, { goldRuleStyle, goldBgStyle } from "../common/gold_text";
 import { IYearsOfExperience } from "../interface";
 
 export default function HeroSection({
   years_of_experience,
 }: IYearsOfExperience) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const [primaryHover, setPrimaryHover] = useState(false);
 
   return (
     <Section id="hero">
-      <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Main Content */}
-        <div
-          className={`
-          relative z-10 text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ease-out
-          ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}
-        `}
+      <div>
+        <div className="h-0.5 w-12 mb-6" style={goldRuleStyle}></div>
+        <p className="text-fluid-eyebrow font-semibold uppercase text-[var(--gold)] mb-8">
+          Software Engineer
+        </p>
+
+        <h1
+          className="text-fluid-hero font-semibold text-[var(--fg)] mb-8 hyphens-none"
+          style={{ wordBreak: "normal", overflowWrap: "normal" }}
         >
-          {/* Badge */}
-          <div className="mb-8">
-            <span className="inline-flex items-center px-6 py-3 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#4A4000] text-sm font-semibold animate-pulse">
-              <span className="w-2 h-2 bg-[#665500] rounded-full mr-3 animate-ping"></span>
-              Available for new opportunities
-            </span>
-          </div>
+          Building high-performance web applications with{" "}
+          <span className="relative inline-block">
+            <GoldText>{years_of_experience}</GoldText>
+            <span
+              className="absolute -bottom-1 left-0 right-0 h-0.5"
+              style={goldRuleStyle}
+            ></span>
+          </span>{" "}
+          years of expertise.
+        </h1>
 
-          {/* Main Heading */}
-          <h1
-            className={`
-            text-4xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight
-            transition-all duration-1000 ease-out delay-200
-            ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}
-          `}
+        <p className="text-fluid-body-lg text-[var(--fg-muted)] mb-12">
+          Software Engineer delivering features end-to-end: data flow design,
+          UI behavior, testing, and production hardening. I care about{" "}
+          <span className="text-[var(--fg)] font-medium">
+            real-world performance
+          </span>{" "}
+          and the{" "}
+          <span className="text-[var(--fg)] font-medium">
+            craft behind shipping well
+          </span>
+          .
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#experience"
+            onMouseEnter={() => setPrimaryHover(true)}
+            onMouseLeave={() => setPrimaryHover(false)}
+            style={{
+              ...goldBgStyle,
+              backgroundImage: primaryHover
+                ? "var(--gold-gradient-hover)"
+                : "var(--gold-gradient)",
+              transition: "background-image 200ms ease",
+            }}
+            className="inline-flex items-center justify-center px-6 py-3 text-fluid-small font-medium"
           >
-            <span className="text-gray-900">Building </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#665500] to-[#4A4000] animate-gradient-x">
-              high-performance
-            </span>
-            <br />
-            <span className="text-gray-900">web applications with </span>
-            <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A4000] to-[#665500]">
-                {years_of_experience}
-              </span>
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] rounded-full"></div>
-            </span>
-            <br />
-            <span className="text-gray-900">years of expertise</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p
-            className={`
-            text-lg lg:text-xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto
-            transition-all duration-1000 ease-out delay-400
-            ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}
-          `}
+            View My Growth
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center border border-[var(--fg)] text-[var(--fg)] px-6 py-3 text-fluid-small font-medium hover:bg-[var(--fg)] hover:text-[var(--bg)] transition-colors duration-200"
           >
-            Software Engineer delivering features end-to-end: data flow design,
-            UI behavior, testing, and production hardening. I care about{" "}
-            <span className="font-semibold text-[#665500]">
-              real-world performance
-            </span>{" "}
-            and the{" "}
-            <span className="font-semibold text-[#665500]">
-              craft behind shipping well
-            </span>
-            .
-          </p>
-
-          {/* CTA Buttons */}
-          <div
-            className={`
-            flex flex-col sm:flex-row gap-6 justify-center items-center
-            transition-all duration-1000 ease-out delay-600
-            ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}
-          `}
-          >
-            <a
-              href="#experience"
-              className="group relative overflow-hidden bg-gradient-to-r from-[#9A7A00] to-[#7A6400] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#9A7A00]/25 transform hover:-translate-y-1 hover:scale-105"
-            >
-              <span className="relative z-10 flex items-center">
-                View My Growth
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transition-transform duration-700 group-hover:translate-x-full"></div>
-            </a>
-
-            <a
-              href="#contact"
-              className="group relative overflow-hidden bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-[#9A7A00] hover:text-[#7A6400] hover:shadow-2xl hover:shadow-gray-900/10 transform hover:-translate-y-1"
-            >
-              <span className="relative z-10 flex items-center">
-                Get In Touch
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/5 to-[#B8941F]/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-            </a>
-          </div>
+            Get In Touch
+          </a>
         </div>
       </div>
     </Section>

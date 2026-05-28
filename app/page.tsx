@@ -14,6 +14,7 @@ import MobileMenu from "./menu/mobile_menu";
 import MobileMenuButton from "./menu/mobile_menu_button";
 import GoToTopButton from "./common/go_to_top_button";
 import Heading from "./menu/heading";
+import ThemeToggle from "./common/theme_toggle";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +36,16 @@ export default function Home() {
     });
   };
 
-  const years_of_experience = new Date().getFullYear() - 2021;
+  const careerStart = new Date(2021, 2, 20); // March 20, 2021
+  const now = new Date();
+  let yrs = now.getFullYear() - careerStart.getFullYear();
+  let mos = now.getMonth() - careerStart.getMonth();
+  if (now.getDate() < careerStart.getDate()) mos -= 1;
+  if (mos < 0) {
+    yrs -= 1;
+    mos += 12;
+  }
+  const years_of_experience = `${yrs}.${mos}`;
 
   const menuItems = [
     { label: "About Me", href: "#about" },
@@ -47,24 +57,22 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white w-full">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-100 z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
+    <div className="min-h-screen bg-[var(--bg)] w-full">
+      <nav className="fixed top-0 w-full bg-[var(--bg)] border-b border-[var(--border)] z-50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-5">
+          <div className="flex justify-between items-center gap-4">
             <Heading />
 
-            {/* Desktop Menu */}
-            <DesktopMenu menuItems={menuItems} />
-
-            {/* Mobile Menu Button */}
-            <MobileMenuButton
-              isMenuOpen={isMenuOpen}
-              setIsMenuOpen={setIsMenuOpen}
-            />
+            <div className="flex items-center gap-2 md:gap-4">
+              <DesktopMenu menuItems={menuItems} />
+              <ThemeToggle />
+              <MobileMenuButton
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
+            </div>
           </div>
 
-          {/* Mobile Menu */}
           <MobileMenu
             menuItems={menuItems}
             isMenuOpen={isMenuOpen}
@@ -73,31 +81,15 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <HeroSection years_of_experience={years_of_experience} />
-
-      {/* About Section */}
       <AboutSection />
-
-      {/* Skills Section */}
       <SkillsSection />
-
-      {/* Experience Section */}
       <ExperienceSection />
-
-      {/* Case Studies Section */}
       <CaseStudiesSection />
-
-      {/* Projects Section */}
       <ProjectsSection />
-
-      {/* Contact Section */}
       <ContactSection />
-
-      {/* Footer */}
       <Footer />
 
-      {/* Go to Top Button */}
       <GoToTopButton scrollToTop={scrollToTop} showScrollTop={showScrollTop} />
     </div>
   );

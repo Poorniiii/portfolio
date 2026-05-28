@@ -8,7 +8,7 @@ Visit the live portfolio: [portfolio-poornima-rajappans-projects.vercel.app](htt
 
 ## ✨ Features
 
-- **🎨 Modern Design**: Clean, professional interface with smooth animations
+- **🎨 Modern Design**: Clean, editorial interface with restrained visual treatment
 - **📱 Fully Responsive**: Optimized for all devices and screen sizes
 - **🚀 Performance Optimized**: Built with Next.js 16+ for optimal loading speeds
 - **♿ Accessible**: WCAG 2.1 compliant with proper semantic markup
@@ -63,7 +63,7 @@ Visit the live portfolio: [portfolio-poornima-rajappans-projects.vercel.app](htt
    ```
 
 4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+   Navigate to [http://localhost:5173](http://localhost:5173)
 
 ## 📁 Project Structure
 

@@ -1,7 +1,12 @@
+import { goldRuleStyle } from "./gold_text";
+
 export default function SectionTitle({ title }: { title: string }) {
   return (
-    <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-8">
-      {title}
-    </h2>
+    <div className="mb-12">
+      <div className="h-0.5 w-12 mb-4" style={goldRuleStyle}></div>
+      <h2 className="text-fluid-body-lg font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
+        {title}
+      </h2>
+    </div>
   );
 }

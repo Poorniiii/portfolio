@@ -17,9 +17,9 @@ export default function MobileMenu({
 
   return (
     <div
-      className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100" : "max-h-0 opacity-0"} overflow-hidden`}
+      className={`md:hidden overflow-hidden ${isMenuOpen ? "max-h-96" : "max-h-0"} transition-[max-height] duration-200`}
     >
-      <div className="pt-4 pb-2 space-y-2">
+      <div className="pt-4 pb-2">
         {menuItems.map((item) => {
           const isActive = activeSection === item.href;
           return (
@@ -28,11 +28,11 @@ export default function MobileMenu({
               href={item.href}
               onClick={() => handleClick(item.href)}
               className={`
-                block px-4 py-3 rounded-lg transition-all duration-200 font-medium
+                block px-4 py-3 text-fluid-small font-medium border-l-2 transition-colors duration-200
                 ${
                   isActive
-                    ? "text-white bg-[#D4AF37] shadow-md"
-                    : "text-gray-600 hover:text-[#D4AF37] hover:bg-gray-50"
+                    ? "text-[var(--gold)] border-[var(--gold)]"
+                    : "text-[var(--fg-muted)] border-transparent hover:text-[var(--fg)]"
                 }
               `}
             >
