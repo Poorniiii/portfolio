@@ -7,7 +7,7 @@ export default function DesktopMenu({ menuItems }: { menuItems: IMenuItem[] }) {
   const { activeSection, setActive } = useActiveSection();
 
   return (
-    <div className="hidden md:flex space-x-6">
+    <div className="hidden md:flex items-center gap-7">
       {menuItems.map((item) => {
         const isActive = activeSection === item.href;
         return (
@@ -16,11 +16,11 @@ export default function DesktopMenu({ menuItems }: { menuItems: IMenuItem[] }) {
             href={item.href}
             onClick={() => setActive(item.href)}
             className={`
-              relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ease-out
+              text-fluid-small font-medium pb-1 border-b-2 transition-colors duration-200
               ${
                 isActive
-                  ? "text-white bg-[#665500] shadow-md"
-                  : "text-gray-600 hover:text-[#665500] hover:bg-gray-50"
+                  ? "text-[var(--gold)] border-[var(--gold)]"
+                  : "text-[var(--fg-muted)] border-transparent hover:text-[var(--fg)]"
               }
             `}
           >

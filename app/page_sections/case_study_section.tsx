@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Section from "../common/section";
 import SectionTitle from "../common/section_title";
+import { goldBorderLeftStyle } from "../common/gold_text";
 import { caseStudyItems } from "../constants/case-study_section_constants";
 
 export default function CaseStudySection() {
@@ -18,104 +19,89 @@ export default function CaseStudySection() {
 
   return (
     <Section id="case-studies">
-      <SectionTitle title="FEATURED WORK" />
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
+      <SectionTitle title="Case Studies" />
+
+      <div className="space-y-4">
         {caseStudyItems.map((item, index) => (
-          <div
+          <button
             key={index}
-            className={`
-              bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out
-              border border-gray-200 overflow-hidden cursor-pointer transform hover:-translate-y-1
-              ${isExpanded(index) ? "ring-2 ring-[#9A7A00] ring-opacity-50" : ""}
-            `}
+            type="button"
             onClick={() => toggleCard(index)}
+            className={`w-full text-left bg-[var(--bg)] border transition-colors duration-200 ${
+              isExpanded(index)
+                ? "border-[var(--border-strong)]"
+                : "border-[var(--border)] hover:border-[var(--border-strong)]"
+            }`}
           >
-            {/* Card Header */}
             <div className="p-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-fluid-h3 font-semibold text-[var(--fg)]">
                   {item.title}
                 </h3>
-                <div
-                  className={`
-                  transition-transform duration-300 ease-in-out text-[#D4AF37]
-                  ${isExpanded(index) ? "rotate-180" : "rotate-0"}
-                `}
+                <svg
+                  className={`w-5 h-5 flex-shrink-0 mt-1 text-[var(--fg-subtle)] transition-transform duration-200 ${
+                    isExpanded(index) ? "rotate-180" : "rotate-0"
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
               </div>
 
-              {/* Preview visible when collapsed */}
               {!isExpanded(index) && (
-                <>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.challenge.length > 120
-                      ? `${item.challenge.substring(0, 120)}...`
-                      : item.challenge}
-                  </p>
-                  <div className="mt-3">
-                    <span className="text-[#665500] text-sm font-medium hover:text-[#4A4000] transition-colors">
-                      Click to expand →
-                    </span>
-                  </div>
-                </>
+                <p className="text-fluid-small text-[var(--fg-muted)] mt-3">
+                  {item.challenge.length > 140
+                    ? `${item.challenge.substring(0, 140)}...`
+                    : item.challenge}
+                </p>
               )}
             </div>
 
-            {/* Expandable Content */}
-            <div
-              className={`
-              transition-all duration-500 ease-in-out overflow-hidden
-              ${isExpanded(index) ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}
-            `}
-            >
-              <div className="px-6 pb-6 pt-0 space-y-4">
-                <div className="border-t border-gray-100 pt-4">
-                  <div className="space-y-4">
-                    <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-lg p-4">
-                      <h4 className="text-md font-semibold text-gray-900 mb-2 flex items-center">
-                        CHALLENGE
-                      </h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        {item.challenge}
-                      </p>
-                    </div>
-
-                    <div className="bg-gray-900/5 border border-gray-200 rounded-lg p-4">
-                      <h4 className="text-md font-semibold text-gray-900 mb-2 flex items-center">
-                        SOLUTION
-                      </h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        {item.whatIDid}
-                      </p>
-                    </div>
-
-                    <div className="bg-[#B8941F]/10 border border-[#B8941F]/20 rounded-lg p-4">
-                      <h4 className="text-md font-semibold text-gray-900 mb-2 flex items-center">
-                        IMPACT
-                      </h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        {item.impact}
-                      </p>
-                    </div>
-                  </div>
+            {isExpanded(index) && (
+              <div className="border-t border-[var(--border)]">
+                <div
+                  style={goldBorderLeftStyle}
+                  className="px-6 py-6 mx-6 my-6"
+                >
+                  <p className="text-fluid-eyebrow font-semibold uppercase text-[var(--gold)] mb-2">
+                    Challenge
+                  </p>
+                  <p className="text-fluid-body text-[var(--fg-muted)]">
+                    {item.challenge}
+                  </p>
+                </div>
+                <div
+                  style={goldBorderLeftStyle}
+                  className="px-6 py-6 mx-6 mb-6"
+                >
+                  <p className="text-fluid-eyebrow font-semibold uppercase text-[var(--gold)] mb-2">
+                    Solution
+                  </p>
+                  <p className="text-fluid-body text-[var(--fg-muted)]">
+                    {item.whatIDid}
+                  </p>
+                </div>
+                <div
+                  style={goldBorderLeftStyle}
+                  className="px-6 py-6 mx-6 mb-6"
+                >
+                  <p className="text-fluid-eyebrow font-semibold uppercase text-[var(--gold)] mb-2">
+                    Impact
+                  </p>
+                  <p className="text-fluid-body text-[var(--fg-muted)]">
+                    {item.impact}
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
+            )}
+          </button>
         ))}
       </div>
     </Section>

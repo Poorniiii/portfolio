@@ -1,5 +1,5 @@
 export interface IYearsOfExperience {
-  years_of_experience: number;
+  years_of_experience: string;
 }
 
 export interface IMenuItem {

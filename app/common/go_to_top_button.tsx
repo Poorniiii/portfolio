@@ -7,15 +7,13 @@ export default function GoToTopButton({
   return (
     <button
       onClick={scrollToTop}
-      className={`cursor-pointer fixed bottom-8 right-8 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 z-40 ${
-        showScrollTop
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-4 pointer-events-none"
+      className={`cursor-pointer fixed bottom-8 right-8 border border-[var(--border)] bg-[var(--bg)] text-[var(--fg-muted)] p-2.5 hover:text-[var(--gold)] hover:border-[var(--gold)] transition-colors duration-200 z-40 ${
+        showScrollTop ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       aria-label="Go to top"
     >
       <svg
-        className="w-5 h-5"
+        className="w-4 h-4"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
