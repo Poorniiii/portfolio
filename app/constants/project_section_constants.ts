@@ -13,7 +13,7 @@ export const projectItems = [
       "IndexedDB",
     ],
     code_link: "https://github.com/Poorniiii/locket",
-    demo_link: "https://github.com/Poorniiii/locket",
+    demo_link: "https://locket-poornima-rajappan.vercel.app/",
   },
   // {
   //   title: "Personal Journal Website",
