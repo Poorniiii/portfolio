@@ -33,22 +33,18 @@ export default function HeroSection({
           years of expertise.
         </h1>
 
-        <p className="text-fluid-body-lg text-[var(--fg-muted)] mb-12">
-          Software Engineer delivering features end-to-end: data flow design,
-          UI behavior, testing, and production hardening. I care about{" "}
-          <span className="text-[var(--fg)] font-medium">
-            real-world performance
-          </span>{" "}
-          and the{" "}
-          <span className="text-[var(--fg)] font-medium">
-            craft behind shipping well
-          </span>
-          .
+        <p className="text-fluid-body-lg text-[var(--fg-muted)] mb-12 text-pretty">
+          Specializing in React, TypeScript, and UI performance. 5+ years at{" "}
+          <span className="text-[var(--fg)] font-medium">Thomson Reuters</span>{" "}
+          and <span className="text-[var(--fg)] font-medium">Cognizant</span>.
+          Known for measurable wins on load time, test coverage, and deployment
+          reliability.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="#experience"
+            href="/Poornima_R_Resume.pdf"
+            download
             onMouseEnter={() => setPrimaryHover(true)}
             onMouseLeave={() => setPrimaryHover(false)}
             style={{
@@ -58,9 +54,23 @@ export default function HeroSection({
                 : "var(--gold-gradient)",
               transition: "background-image 200ms ease",
             }}
-            className="inline-flex items-center justify-center px-6 py-3 text-fluid-small font-medium"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-fluid-small font-medium"
           >
-            View My Growth
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"
+              />
+            </svg>
+            Download Resume
           </a>
           <a
             href="#contact"

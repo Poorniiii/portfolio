@@ -131,7 +131,7 @@ body {
   }
 }
 
-/* Fluid typography — scales smoothly from mobile to wide/zoomed-out viewports.
+/* Fluid typography. Scales smoothly from mobile to wide/zoomed-out viewports.
    Upper caps are intentionally generous so text keeps growing on very wide
    monitors and zoomed-out viewports (up to ~3500px effective viewport). */
 .text-fluid-hero {

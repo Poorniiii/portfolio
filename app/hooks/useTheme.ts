@@ -7,7 +7,7 @@ export type Theme = "light" | "dark";
 const THEME_EVENT = "theme-change";
 
 function subscribe(callback: () => void) {
-  // "storage" fires on OTHER tabs when localStorage changes — keeps tabs in sync.
+  // "storage" fires on OTHER tabs when localStorage changes. Keeps tabs in sync.
   window.addEventListener("storage", callback);
   // Same-tab updates: localStorage doesn't fire "storage" on the tab that wrote it,
   // so setTheme dispatches this custom event to notify the current tab.
@@ -23,7 +23,7 @@ function getSnapshot(): Theme {
   return attr === "light" ? "light" : "dark";
 }
 
-// SSR can't read DOM / localStorage — fall back to the same default the
+// SSR can't read DOM / localStorage; fall back to the same default the
 // pre-hydration script in layout.tsx uses.
 function getServerSnapshot(): Theme {
   return "dark";
@@ -37,7 +37,7 @@ export function useTheme() {
     try {
       localStorage.setItem("theme", next);
     } catch {
-      // storage may be disabled (private mode) — ignore
+      // storage may be disabled (private mode); ignore
     }
     window.dispatchEvent(new Event(THEME_EVENT));
   };
