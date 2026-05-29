@@ -1,22 +1,31 @@
 const thomsonReutersJobResponsibilities = [
-  "At Thomson Reuters, I work on highly interactive and data-intensive web applications where performance and reliability directly shape user workflows. Most of my contributions revolve around identifying bottlenecks, simplifying complex UI logic, and improving the way data moves through the system.",
-  "A significant part of my role involves breaking down slow or fragile areas of the application and redesigning them using a more predictable and scalable architecture. Whether it's optimizing render paths, reducing unnecessary re-computation, improving the batching of network calls, or tightening up the pipeline for deployments, I try to approach problems with long-term durability in mind.",
-  "I frequently collaborate with backend teams to refine API contracts, reduce payload sizes, and design flows that avoid redundant calls under heavy usage. I also work closely with QA and product partners to ensure we ship features that are both user-focused and operationally stable.",
-  "My day-to-day work sits at the intersection of frontend engineering, performance tuning, platform reliability, and CI/CD ecosystems giving me a broad view of how the entire system behaves in production.",
+  "Cut React SPA initial load 40% (3.2s to 1.9s) via code-splitting, lazy loading, and memoization, measured in Datadog RUM.",
+  "Reduced deployment time from 2 hours to 15 minutes by enforcing Infrastructure as Code (Cumulus) for CI/CD pipelines, eliminating configuration drift.",
+  "Owned AWS CodePipeline management, resolving deployment failures and reducing pipeline downtime by 60% across dev/staging/prod.",
+  "Raised unit test coverage from 40% to 75% across 3 major applications (Jest + React Testing Library), reducing post-release defects.",
+  "Maintained 0 critical vulnerabilities by triaging Snyk/Dependabot alerts weekly and enforcing secure dependency practices.",
+  "Built an MCP server (LLM tool-integration layer) integrated with Cline, enabling natural language search over application data with RBAC-protected Node.js endpoints.",
+  "Reduced transient failures in an AI summarization service by 65% via adaptive retry/fallback logic (exponential backoff, token reduction, alternate models) within a 5-minute SLA.",
+  "Built a D3.js + React data visualization dashboard with real-time filtering, search, and interactive charts.",
+  "Designed a secure routing system with protected routes and role-based access control (RBAC).",
+  "Containerized applications with Rancher Desktop, deploying Docker images to AWS ECR for ECS across environments.",
+  "Delivered 12+ features quarterly in Agile sprints with full-cycle ownership from API contract design through UI rendering.",
+  "Mentored 2 junior developers on design patterns, testing strategies, and performance optimization.",
 ];
 
 const cognizantJobResponsibilities = [
-  "My time at Cognizant gave me hands-on experience with large and long-running enterprise applications, where engineering decisions accumulate over time. A lot of my work involved making existing systems easier to reason about: modularizing legacy UI, improving predictability in state management, and restructuring components to reduce cognitive load for future developers.",
-  "I worked across features that dealt with search, filtering, and data visualization areas that exposed me to latency, network constraints, and client-side performance challenges. I learned to think about how each part of the request/response chain affects the end user and how small architectural improvements can have outsized impact.",
-  "This role also strengthened my skills in cross-team collaboration. I regularly aligned on requirements with product managers, validated technical feasibility with backend teams, and worked with QA engineers to ensure accessibility and compatibility across diverse environments.",
-  "It was an environment where engineering quality mattered, and I learned how to balance scope, clarity, and timelines effectively.",
+  "Built React enterprise application UI serving 10K+ daily users with cross-browser compatibility (Chrome, Safari, Edge).",
+  "Refactored a 50K+ line legacy codebase, cutting component complexity 35% and feature delivery time 25% through custom hooks and shared components.",
+  "Cut search query latency 95% (2s → 100ms) by integrating Elastic App Search with debounced queries and client-side caching.",
+  "Drove a 20% lift in feature usage by integrating Pendo analytics and surfacing UX bottlenecks for product decisions.",
+  "Reduced API payload size 40% through field selection and pagination, improving responsiveness on slower networks.",
+  "Ensured WCAG accessibility across 20+ components: keyboard navigation, ARIA labels, and screen reader support.",
+  "Automated dead-code detection via GitHub Actions, keeping the codebase lean as it grew.",
 ];
 
 const internshipResponsibilities = [
-  "I joined Cognizant as an intern after graduating in Electronics and Instrumentation Engineering. Despite coming from a non-CS background, I gravitated toward software early on and used this internship to build a formal foundation in development practices.",
-  "During my training, I worked on internal projects using ASP.NET MVC and backend fundamentals. This experience helped me understand the structure behind production-grade systems, routing, server-side logic, data flow, and separation of concerns.",
-  "It also taught me the importance of disciplined engineering: writing predictable code, following conventions, and understanding the “why” behind patterns.",
-  "This internship laid the groundwork for my transition into a full-time engineering role and eventually into the broader web ecosystem where I now operate.",
+  "Completed Cognizant's internship program in ASP.NET MVC and full-stack fundamentals.",
+  "Worked through internal training projects covering routing, server-side logic, data flow, and separation of concerns. This formed the foundation for my transition from Electronics & Instrumentation into software engineering.",
 ];
 
 export const experienceItems = [

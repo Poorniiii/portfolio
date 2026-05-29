@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Poornima Rajappan - Software Engineer",
   description:
-    "Crafting innovative digital experiences with modern web technologies",
+    "Frontend-leaning Software Engineer with 5+ years building data-intensive React + TypeScript web apps at Thomson Reuters and Cognizant",
   keywords: [
     "frontend development",
     "reactjs",
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Poornima Rajappan" }],
   openGraph: {
     title: "Poornima Rajappan - Software Engineer",
-    description: "Crafting Digital Experiences",
+    description:
+      "Frontend-leaning Software Engineer specializing in React, TypeScript, and UI performance.",
     url: "https://portfolio-poornima-rajappan.vercel.app",
     siteName: "Poornima's Portfolio",
     images: [
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
         url: "https://portfolio-poornima-rajappan.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Poornima Rajappan - Crafting Digital Experiences",
+        alt: "Poornima Rajappan - Software Engineer",
       },
     ],
     locale: "en_US",

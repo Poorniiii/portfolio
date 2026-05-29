@@ -66,15 +66,21 @@ export default function ExperienceSection() {
                 </div>
 
                 {isExpanded(index) && (
-                  <div className="px-6 pb-6 border-t border-[var(--border)] pt-6 space-y-4">
-                    {item.responsibilities.map((responsibility, idx) => (
-                      <p
-                        key={idx}
-                        className="text-fluid-body text-[var(--fg-muted)]"
-                      >
-                        {responsibility}
-                      </p>
-                    ))}
+                  <div className="px-6 pb-6 border-t border-[var(--border)] pt-6">
+                    <ul className="space-y-3 list-none">
+                      {item.responsibilities.map((responsibility, idx) => (
+                        <li
+                          key={idx}
+                          className="text-fluid-body text-[var(--fg-muted)] flex gap-3"
+                        >
+                          <span
+                            className="flex-shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-[var(--gold)]"
+                            aria-hidden
+                          ></span>
+                          <span className="flex-1">{responsibility}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
               </button>
